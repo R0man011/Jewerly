@@ -1,0 +1,19 @@
+.section-title {
+  font-family: "NotoSerif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+  color: var(--gray-color);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include small-tablet {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 12px;
+  }
+}

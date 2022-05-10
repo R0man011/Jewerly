@@ -1,0 +1,62 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  font-family: "NotoSerif";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  letter-spacing: 4px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @include small-tablet {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+
+  &--border-white {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    @include hover {
+      background-color: var(--light-color);
+      color: var(--black-color);
+    }
+  }
+
+  &--border-black {
+    border: 1px solid var(--black-color);
+    color: var(--black-color);
+
+    @include hover {
+      background-color: var(--black-color);
+      color: var(--light-color);
+    }
+  }
+
+  &--fill-white {
+    background-color: var(--light-color);
+    color: var(--black-color);
+
+    @include hover {
+      background-color: var(--brown-color);
+      color: var(--light-color);
+    }
+  }
+
+  &--fill-black {
+    background-color: var(--black-color);
+    color: var(--light-color);
+
+    @include hover {
+      background-color: var(--brown-color);
+      color: var(--light-color);
+    }
+  }
+}

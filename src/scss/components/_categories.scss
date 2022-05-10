@@ -1,0 +1,11 @@
+.categories {
+  padding: 65px 0;
+
+  &__subtitle {
+    margin-bottom: 48px;
+
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  @include small-tablet {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include mobile {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black-color);
+    transition: color 0.3s ease-in-out;
+
+    @include hover {
+      color: var(--brown-color);
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.shops {
+  background: url(../img/shops-bg.jpg);
+  @include bg-cover;
+
+  padding: 84px 0;
+
+  @include small-tablet {
+    padding: 64px 0;
+  }
+
+  @include mobile {
+    padding: 48px 0;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    color: var(--light-color);
+  }
+
+  &__subtitle {
+    color: var(--light-color);
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    width: 730px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--light-color);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      width: 320px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 180%;
+    }
+
+    @include small-mobile {
+      width: 280px;
+    }
+  }
+}

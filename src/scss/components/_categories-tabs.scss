@@ -1,0 +1,146 @@
+.tabs {
+  &__nav {
+    @include flex-v-center;
+
+    margin-bottom: 32px;
+
+    @include for-desktop {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 15px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 14px;
+    }
+
+    @include mobile {
+
+    }
+
+    &-item {
+      @include mobile {
+
+      }
+
+      &:not(:last-child) {
+        margin-right: 25px;
+
+        @include mobile {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-btn {
+      letter-spacing: 3.3px;
+      // &:focus {
+      //   background-color: var(--black-color);
+      //   color: var(--light-color);
+      // }
+
+      &--active {
+        outline: none;
+        background-color: var(--black-color);
+        color: var(--light-color);
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+
+    @include small-tablet {
+      gap: 8px;
+    }
+  }
+
+  &__panel {
+    grid-column: 4 span;
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 12 span;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    transition: background-image 0.3s ease-in-out;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(180deg, rgba(180, 180, 180, 0) 20.31%, #333333 100%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(180deg, rgba(51, 51, 51, 0.3) 20.31%, #333333 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    @include hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    img {
+      @include small-tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        height: 220px;
+      }
+
+      @include small-mobile {
+        height: 136px;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light-color);
+    transform: translateX(-50%);
+    z-index: 3;
+
+    @include small-tablet {
+      font-weight: 400;
+      text-transform: none;
+      bottom: 10px;
+    }
+
+    @include mobile {
+      bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+
+  @include middle-tablet {
+    overflow-x: scroll;
+    grid-auto-flow: column;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  @include small-tablet {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    @include middle-tablet {
+      width: 263px;
+    }
+
+    &--active {
+      background-color: var(--alabaster-color);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+      @include middle-tablet {
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @include hover {
+      background-color: var(--alabaster-color);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+      .catalog-list__icon {
+        fill: var(--coral-color);
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+
+    &::before {
+      content: "New";
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      font-weight: 600;
+      color: var(--light-color);
+      background-color: var(--brown-color);
+      border-radius: 100%;
+      z-index: 5;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 21px 16px 16px 16px;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 18px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    fill: var(--seashell-color);
+    transition: fill 0.3s ease-in-out;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--active {
+      fill: var(--coral-color);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--black-color);
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray-color);
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--black-color);
+    margin: 0;
+
+    &--old {
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--coral-color);
+      text-decoration: line-through;
+      margin-left: 16px;
+    }
+  }
+}

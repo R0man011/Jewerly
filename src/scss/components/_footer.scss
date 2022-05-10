@@ -1,0 +1,14 @@
+.footer {
+  &__content {
+    padding: 75px 0 43px 0;
+    border-top: 1px solid #d8d1d1;
+
+    @include middle-tablet {
+      padding: 40px 0 40px 0;
+    }
+
+    @include small-tablet {
+      padding: 24px 0 24px 0;
+    }
+  }
+}

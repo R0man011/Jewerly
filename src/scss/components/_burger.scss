@@ -1,0 +1,5 @@
+.burger {
+  @include small-tablet {
+    @include burger;
+  }
+}

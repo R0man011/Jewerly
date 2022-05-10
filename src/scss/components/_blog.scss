@@ -1,0 +1,37 @@
+.blog {
+  padding: 0 0 120px 0;
+
+  @include middle-tablet {
+    padding: 0 0 80px 0;
+  }
+
+  @include small-tablet {
+    padding: 0 0 88px 0;
+  }
+
+  @include small-mobile {
+    padding: 0 0 70px 0;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__btn {
+    @include small-tablet {
+      min-width: 235px;
+    }
+  }
+}
